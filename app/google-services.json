@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "63720222186",
+    "project_id": "talkcipher",
+    "storage_bucket": "talkcipher.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63720222186:android:b9c8476466e941bb019693",
+        "android_client_info": {
+          "package_name": "com.example.talkcipher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "63720222186-c4hqi8ljmb54mrquohvmfegpnbkmr3m6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTkZkQNBV43p7QMXXl1314KFNtmWfC8rA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "63720222186-c4hqi8ljmb54mrquohvmfegpnbkmr3m6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
