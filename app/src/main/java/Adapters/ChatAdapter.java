@@ -1,18 +1,27 @@
 package Adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.talkcipher.R;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.sql.Time;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Date;
 
 import Model.Messages;
 
@@ -47,16 +56,35 @@ public class ChatAdapter extends RecyclerView.Adapter {
 
     }
 
+
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         Messages message = Messages.get(position);
         if(holder.getClass() == senderViewHolder.class)
         {
             ((senderViewHolder) holder).senderMessage.setText(message.getMessage());
+            Timestamp timestamp = new Timestamp(message.getTimeStamp());
+            Date date = new Date(timestamp.getTime());
+
+
+            SimpleDateFormat dateFormat = new SimpleDateFormat("KK:mm a");
+            String mssgTime = dateFormat.format(date).toString();
+
+            ((senderViewHolder) holder).senderTime1.setText(mssgTime);
         }
         else
         {
             ((recieverViewHolder) holder).recieverMessage.setText(message.getMessage());
+
+            Timestamp timestamp = new Timestamp(message.getTimeStamp());
+            Date date = new Date(timestamp.getTime());
+
+
+            SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm a");
+            String mssgTime = dateFormat.format(date).toString();
+
+            ((recieverViewHolder) holder).recieverTime.setText(mssgTime);
+
         }
     }
 
@@ -78,11 +106,11 @@ public class ChatAdapter extends RecyclerView.Adapter {
     }
 
     public class senderViewHolder extends RecyclerView.ViewHolder{
-        TextView senderMessage, senderTime;
+        TextView senderMessage, senderTime1;
         public senderViewHolder(@NonNull View itemView) {
             super(itemView);
             senderMessage = itemView.findViewById(R.id.senderText);
-            senderTime = itemView.findViewById(R.id.senderTime);
+            senderTime1 = itemView.findViewById(R.id.senderTime);
         }
     }
 

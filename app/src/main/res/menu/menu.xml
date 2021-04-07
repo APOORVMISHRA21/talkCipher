@@ -3,7 +3,7 @@
 
     <item
         android:id="@+id/settings"
-        android:title="Settings" />
+        android:title="Account" />
 
     <item
         android:id="@+id/logout"

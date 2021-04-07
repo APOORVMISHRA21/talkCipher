@@ -2,6 +2,7 @@ package Model;
 
 public class Users {
     String userName, phoneNumber, userId, lastMessage, profilePic;
+    int encryptionCode;
 
     public Users(String userName, String phoneNumber, String userId, String lastMessage, String profilePic) {
         this.userName = userName;
@@ -13,10 +14,11 @@ public class Users {
 
     public Users(){}
 
-    public Users(String userName, String phoneNumber, String userId) {
+    public Users(String userName, String phoneNumber, String userId, String profilePic) {
         this.userName = userName;
         this.phoneNumber = phoneNumber;
         this.userId = userId;
+        this.profilePic=profilePic;
     }
 
     //Constructor for SignUp page.

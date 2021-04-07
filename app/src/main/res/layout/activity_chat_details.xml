@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ChatDetailsActivity"
-    android:background="@color/black">
+    android:background="#3c3c3c">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -33,7 +33,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="1.0" />
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profilePic"
                 android:layout_width="45dp"
                 android:layout_height="43dp"
@@ -51,6 +51,7 @@
                 android:layout_marginLeft="5dp"
                 android:text="Apoorv Mishra"
                 android:textSize="18sp"
+                android:textColor="@color/white"
                 app:drawableTint="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/profilePic"
@@ -82,6 +83,7 @@
             android:layout_marginStart="5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
             android:layout_weight="1"
             android:background="@drawable/bg_chat"
             android:ems="10"
@@ -94,6 +96,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:padding="5dp"
+            android:layout_marginTop="5dp"
             android:src="@drawable/ic_send_button"
             app:tint="@color/white" />
 

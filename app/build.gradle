@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -14,6 +15,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
 
     buildFeatures {
@@ -45,7 +47,23 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'androidx.viewpager:viewpager:1.0.0'
+    implementation 'com.google.firebase:firebase-storage:19.2.1'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation platform('com.google.firebase:firebase-bom:26.7.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'de.hdodenhof:circleimageview:3.1.0' //circleImageView
+    api 'com.theartofdev.edmodo:android-image-cropper:2.8.+' //crop
+    implementation 'com.squareup.picasso:picasso:2.71828' //loading image from net
+    implementation 'id.zelory:compressor:2.0.0' //for compresss
+    implementation 'androidx.multidex:multidex:2.0.1' //to overcome error "Cannot fit requested classes in a single dex file (# methods: 67495 > 65536)"
+    // define a BOM and its version
+    implementation(platform("com.squareup.okhttp3:okhttp-bom:4.9.0"))
+    // define any required OkHttp artifacts without version
+    implementation("com.squareup.okhttp3:okhttp")
+    implementation("com.squareup.okhttp3:logging-interceptor")
+    implementation 'com.github.bumptech.glide:glide:3.8.0'
+
+
 }

@@ -24,7 +24,7 @@
             android:src="@drawable/ic__cipher"/>
 
         <EditText
-            android:id="@+id/phone"
+            android:id="@+id/signInPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -39,11 +39,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="right"
-            android:text="Click to SignUp" />
+            android:text="New user? SignUp" />
 
 
         <Button
-            android:id="@+id/signIn"
+            android:id="@+id/signInBTN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"

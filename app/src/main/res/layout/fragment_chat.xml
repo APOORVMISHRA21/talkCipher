@@ -2,7 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="Fragments.chatFragment">
+    tools:context="Fragments.chatFragment"
+    android:background="#212121">
+
 
 
     <androidx.recyclerview.widget.RecyclerView
